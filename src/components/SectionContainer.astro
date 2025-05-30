@@ -1,0 +1,23 @@
+---
+const {class: className, id} = Astro.props;
+---
+
+<section
+  class={`section-container ${className}`}
+  id={id}
+  data-section={id}
+>
+  <slot />
+</section>
+
+
+<style>
+  .section-container {
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+</style>

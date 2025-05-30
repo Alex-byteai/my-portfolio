@@ -1,0 +1,80 @@
+---
+
+const navItems = [
+  {
+    title: 'Experiencia',
+    label: 'experiencia',
+    url: ''
+  },
+  {
+    title: 'Proyectos',
+    label: 'proyectos',
+    url: ''
+  },
+  {
+    title: 'Sobre mi',
+    label: 'experiencia',
+    url: ''
+  },
+  {
+    title: 'Contacto',
+    label: 'contacto',
+    url: ''
+  }
+];
+
+---
+
+<header>
+  <nav>
+    {navItems.map((nav) => (
+      <a 
+      href={nav.url}
+      class="h-nav-a"
+      aria-label={nav.label}
+      >
+        {nav.title}
+      </a>
+    ))}
+
+  </nav>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 600px;
+    border-radius: 10px;
+    z-index: 50;
+    background-color: hsla(300, 1%, 36%, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Para soporte en Safari */
+    padding: 1rem 2rem;
+    box-shadow: 0px 0px 10px rgba(110, 109, 109, 0.3);
+  } 
+  nav {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .h-nav-a {
+    color: rgb(163, 161, 156);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .h-nav-a:hover {
+    color: #b4ac3f;
+  }
+</style>
+
+
+

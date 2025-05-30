@@ -1,0 +1,51 @@
+---
+const personalImageAlt = 'Cesar Montoya';
+const personalImageSrc = 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW9sNzdmanNmNzZ3NGQ5YzNqNWd6eW1obzZ0bmZpNGRzdnp4dHVoZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kiWlpxD6hXmvTL8dio/giphy.gif';
+---
+
+<div class="hero">
+  <div>
+    <img 
+      src={personalImageSrc} 
+      alt={personalImageAlt}
+    >
+    <h1 class="hero-title">
+      Yoo! I'm Cesar Montoya
+    </h1>
+    <p class="hero-description">
+    I'm a front-end developer with a passion for creating innovative web applications. I love coding, learning new technologies, and sharing knowledge with others.
+    </p>
+  </div>
+</div>
+
+<script is:inline src="/src/scripts/hero.js" type="module"></script>
+
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  .hero img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+  }
+</style>
