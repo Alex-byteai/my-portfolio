@@ -13,7 +13,8 @@ import Header from "../components/Header.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Mi portafolio</title>
 	</head>
-	<body>
+	<body class="body-layout">
+		<!-- Header component -->
 		<Header />
 		<slot />
 	</body>
@@ -28,4 +29,13 @@ import Header from "../components/Header.astro";
 		height: 100%;
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 	}
+
+	#particles-js{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
 </style>
+
+
