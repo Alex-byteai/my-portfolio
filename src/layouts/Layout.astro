@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import StartsBackground from "../components/StartsBackground.astro";
 
 
 ---
@@ -14,6 +15,8 @@ import Header from "../components/Header.astro";
 		<title>Mi portafolio</title>
 	</head>
 	<body class="body-layout">
+    <!-- Background component -->
+    <StartsBackground />
 		<!-- Header component -->
 		<Header />
 		<slot />
@@ -28,12 +31,6 @@ import Header from "../components/Header.astro";
 		width: 100%;
 		height: 100%;
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-	}
-
-	#particles-js{
-		position: absolute;
-		width: 100%;
-		height: 100%;
 	}
 
 </style>

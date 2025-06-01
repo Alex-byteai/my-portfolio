@@ -9,12 +9,14 @@ const personalImageSrc = 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW9s
       src={personalImageSrc} 
       alt={personalImageAlt}
     >
-    <h1 class="hero-title">
-      Yoo! I'm Cesar Montoya
-    </h1>
-    <p class="hero-description">
-    I'm a front-end developer with a passion for creating innovative web applications. I love coding, learning new technologies, and sharing knowledge with others.
-    </p>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Yoo! I'm Cesar Montoya
+      </h1>
+      <p class="hero-description">
+      I'm a front-end developer with a passion for creating innovative web applications. I love coding, learning new technologies, and sharing knowledge with others.
+      </p>
+    </div>  
   </div>
 </div>
 
@@ -45,6 +47,11 @@ const personalImageSrc = 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW9s
     margin-bottom: 20px;
   }
 
+  .hero-content {
+    padding: 0;
+    height: 300px;
+  }
+
   .hero-title {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -52,6 +59,5 @@ const personalImageSrc = 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW9s
 
   .hero-description {
     font-size: 1.2rem;
-    max-width: 600px;
   }
 </style>

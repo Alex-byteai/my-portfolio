@@ -1,0 +1,67 @@
+---
+---
+
+<canvas id="canvas"></canvas>
+
+
+
+<script type="module">
+
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  let w = canvas.width = window.innerWidth;
+  let h = canvas.height = window.innerHeight;
+
+  const maxStars = 300;
+  let stars = [];
+
+  window.addEventListener('resize', () => {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  });
+
+  class Star {
+    constructor() {
+      this.reset();
+    }  
+
+    reset() {
+      this.x = Math.random() * w;
+      this.y = Math.random() * h;
+      this.size = Math.random() * 1.5 + 0.5;
+      this.opacity = Math.random() * 0.5 + 0.5;
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+
+  
+
+  for (let i = 0; i < maxStars; i++) {
+    stars.push(new Star());
+  }
+
+  function init() {
+    stars.forEach(star => {
+      star.draw();
+    });
+  }
+
+  init();
+
+</script>
+
+<style>
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+</style>
